@@ -1,0 +1,130 @@
+.side_bar{
+    height:100%;
+    width:14%;
+    padding:0.3rem 1.2rem;
+    border-color: #27324D;
+    border-width: 0 0 0.2rem 0.2rem;
+    border-style: solid;
+    border-radius: 1rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigation_top{
+    height:60%;
+    width:100%;
+}
+
+.logo{
+    height:7rem;
+    width:100%;
+}
+.nav_items{
+    position:relative;
+}
+.nav_item{
+    height:6.5rem;
+    width:100%;
+    margin:1rem 0;
+    background: rgba(124, 77, 255, 0.10);
+    border-radius:1.2rem;
+    display: flex;
+    font-size: 1.8rem;
+    color:#94A3B8;
+    padding:0 0.5rem;
+    position:relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav_item::before{
+    content:'';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background: rgba(124, 77, 255, 0.35);
+    top:0px;
+    left:-100%;
+    transition: all 0.5s ease;
+}
+.nav_item:hover::before{
+    transform: translateX(200%);
+    
+}
+.active{
+    background: rgba(124, 77, 255, 0.18);
+    color: #FFFFFF;
+    border-left:2px solid  #7C4DFF;
+}
+.nav_icon{
+    height:100%;
+    width:20%;  
+    display: flex;
+    
+}
+.icon_active{
+    color:#7C4DFF;
+}
+.nav_icon .nav_icon_logo{
+    height:3rem;
+    width:3rem;
+    margin:auto;
+}
+
+.nav_text{
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    padding:1rem;
+}
+
+.theme_container{
+    height:15rem;
+    width:100%;
+    margin-bottom:1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    color:#94A3B8;
+    letter-spacing: 0.5px;
+}
+.themes{
+    margin-top:2rem;
+    display: flex;
+    justify-content: space-around;
+}
+.theme_border{
+    width:4rem;
+    height:4rem;
+    border-radius: 50%;
+    display: flex;
+}
+.theme_active{
+    border: 2px solid rgb(176, 168, 168);
+}
+.theme_icon{
+    height:2.5rem;
+    width:2.5rem;
+    border-radius: 50%;
+    background-color: #7C4DFF;
+    position:relative;
+    z-index:5;
+    margin:auto;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.theme_border:nth-child(2) .theme_icon{
+    background-color: #3B82F6;
+}
+.theme_border:nth-child(3) .theme_icon{
+    background-color: #22C55E;
+}
+.theme_border:nth-child(4) .theme_icon{
+    background-color: #EC4899;
+}
+.theme_icon:hover{
+    height:3.2rem;
+    width:3.2rem;
+}
